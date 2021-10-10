@@ -9,8 +9,13 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/api")
 public class ApiController {
 
-    @GetMapping
+    @GetMapping("/")
     public UserReq user(UserReq userReq){
         return userReq;
+    }
+
+    @GetMapping("/hello") // 주소할당
+    public String hello(){
+        return "hello spring boot";
     }
 }
